@@ -21,10 +21,47 @@ using namespace std;
     hi - 2
     mark - 1
 */
+vector<string> strList;
+vector<int> strMatchCount;
+string strValue;
+int inputStrCount;
+int i;
+unsigned j;
+unsigned k;
+
+void getNumCount();
+void populateStrList(int nElements);
+void matchStr(vector<string> strList);
+
 int main() {
-    vector<string> strList;
-    int inputStrCount;
-    
+  
+    getNumCount();
+    populateStrList(inputStrCount);
+    matchStr(strList);
+
+
 
     return 0;
+}
+
+void getNumCount() {
+    do {
+        cin >> inputStrCount;
+    } while (inputStrCount <= 0);
+}
+
+void populateStrList(int nElements) {
+    for (i = 0; i < nElements; ++i) {
+        cin >> strValue;
+        strList.push_back(strValue);
+    }
+}
+
+void matchStr(vector<string> strList) {
+    int strSize = strList.size();
+
+    strMatchCount.resize(strList.size());
+    for (j = 0; j < strSize; ++j) {
+       
+    }
 }
