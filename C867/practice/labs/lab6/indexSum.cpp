@@ -25,16 +25,27 @@ using namespace std;
 */
 
 int main() {
-   //Create an array with a size of 6 indexes
-   
-   //Fill each index of your array with values provided by the user
+   int arr[6];
+   int inputValue;
+   int sum = 0;
+   int product = 1;
+   int i;
 
-   /*Declare and initialize values for your final evenSum and oddProduct (Keeping in mind multiplying
-   any number by 0 results in 0)*/
+   for (i = 0; i < 6; ++i) {
+    cin >> inputValue;
+    arr[i] = inputValue;
+   }
 
-   //Iterate over the array, checking which numbers are even, which are odd, and altering the variables accordingly
+   for (i = 0; i < 6; ++i) {
+    if (i % 2 == 0) {
+        sum += arr[i];
+    } else {
+        product = product * arr[i];
+    }
+   }
 
-   //Print the final values to the console with a new line between them
+   cout << sum << endl;
+   cout << product;
 
    return 0;
 }
