@@ -59,7 +59,6 @@ void populateStrList(int nElements) {
 
 void matchStr(vector<string> strList) {
     int strSize = strList.size();
-
     strMatchCount.resize(strList.size());
     for (j = 0; j < strSize; ++j) {
        
