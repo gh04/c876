@@ -35,7 +35,7 @@ int main() {
       sequenceList.push_back(inputVal);
     
    }
-  
+
    for (i = 2; i < numValues; ++i) {
       sequenceList.push_back(sequenceList.at(i - 2) + sequenceList.at(i - 1));
    }

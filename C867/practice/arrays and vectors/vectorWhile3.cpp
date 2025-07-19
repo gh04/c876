@@ -29,7 +29,7 @@ int main() {
    }
 
    for (i = 0; i < inputIntegers.size(); ++i) {
-    if (inputIntegers.back() >= inputIntegers.at(i)) {
+    if (inputIntegers.back() > inputIntegers.at(i)) {
         cout << "IGNORE\n";
     } else {
         cout << inputIntegers.at(i) << endl;

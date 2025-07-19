@@ -36,7 +36,6 @@ int main() {
       offsetAmount.push_back(input);
    }
 
-   /* Your solution goes here  */
    for (i = 0; i < NUM_VALS; ++i) {
     cout << origList.at(i) + offsetAmount.at(i) << " ";
    }

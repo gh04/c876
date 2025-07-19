@@ -27,7 +27,7 @@ int main() {
       cin >> value;
    }
 
-   for (i = dataVect.size() - 1; i <= 0; --i) {
+   for (i = dataVect.size() - 1; i >= 0; --i) {
     if (dataVect.at(i) % 2 != 0) {
         cout << dataVect.at(i) << endl;
     }
