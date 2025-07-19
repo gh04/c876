@@ -30,13 +30,17 @@ int main() {
    int annualSalary;
    double taxRate;
    int taxToPay;
+   int totalSalaries;
+   int totalTaxes;
    int numSalaries;
    bool keepLooking;
    unsigned int i;
+   int j;
+
    vector<int> salaryBase(5);
    vector<double> taxBase(5);
-   // FIXME: Declare annualSalaries and taxesToPay vectors to hold 10 elements each.
-   // FIXME: Use the constant MAX_ELEMENTS to declare the vectors
+   vector<int> annualSalaries(MAX_ELEMENTS);
+   vector<int> taxesToPay(MAX_ELEMENTS);
 
    salaryBase.at(0) = 0;
    salaryBase.at(1) = 20000;
@@ -55,11 +59,12 @@ int main() {
    cout << "\nEnter annual salary (0 to exit): " << endl;
    cin >> annualSalary;
 
-   while (annualSalary > 0) {
+   while ((annualSalary > 0) && (numSalaries < MAX_ELEMENTS)) {
       i = 0;
+      taxRate = 0;
       keepLooking = true;
 
-      // Search for the appropriate table row for given annualSalary
+      // Search for appropriate table row for given annualSalary
       while ((i < salaryBase.size()) && keepLooking) {
          if (annualSalary <= salaryBase.at(i)) {
             taxRate = taxBase.at(i);
@@ -68,23 +73,32 @@ int main() {
          else {
             ++i;
          }
-      } // End inner loop (search for appropriate table row)
+      } // End inner while loop (search for appropriate table row)
 
-      taxToPay = static_cast<int>(annualSalary * taxRate);   // Truncate tax to an integer amount
+      taxToPay = static_cast<int>(annualSalary * taxRate); // Truncate tax to an integer amount
+      annualSalaries.at(numSalaries) = annualSalary;
+      taxesToPay.at(numSalaries) = taxToPay;
 
-      // FIXME: Insert code to include entries to the annual salaries and taxes to pay
-      // FIXME: tables. Replace the appropriate variables with the vector element.
-      cout << "Annual salary: " << annualSalary <<
+      cout << "Annual salary: " << annualSalaries[numSalaries] <<
               "\tTax rate: " << taxRate <<
-              "\tTax to pay: " << taxToPay << endl;
+              "\tTax to pay: " << taxesToPay[numSalaries] << endl;
+      ++numSalaries;
 
       // Get the next annual salary
       cout << "\nEnter annual salary (0 to exit): " << endl;
       cin >> annualSalary;
    } // End outer while loop (valid annualSalary entered)
+   
+   // Sum the annual salaries and taxes to pay and print the totals
+   totalSalaries = 0;
+   totalTaxes = 0;
 
-   // FIXME: Challenge - add code to sum the annual salaries and taxes to pay
-   //        and print the totals
+   for (j = 0; j < numSalaries; ++j) {
+      totalSalaries += annualSalaries[j];
+      totalTaxes    += taxesToPay[j];
+   }
+   cout << "\nTotal salaries: " << totalSalaries <<
+           "\tTotal taxes: " << totalTaxes << endl;
 
    return 0;
 }
