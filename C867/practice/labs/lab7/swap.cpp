@@ -20,19 +20,26 @@ using namespace std;
     8 3 4 2
 */
 int const VALUE_COUNT = 4;
+bool CheckVectorSize(const vector<int> vectorArr);
+void GetInputs(vector<int>& inputValues);
 void SwapValues(int& userVal1, int& userVal2, int& userVal3, int& userVal4);
-void getInputs(vector<int>& inputValues);
 
 int main() { 
     vector<int> inputValues;   
     
-    getInputs(inputValues);
+    GetInputs(inputValues);
    
-
+    if (CheckVectorSize(inputValues)) {
+        SwapValues(inputValues.at(0), 
+                   inputValues.at(1), 
+                   inputValues.at(2), 
+                   inputValues.at(3)
+                  );
+    }
     return 0;
 }
 
-void getInputs(vector<int>& vectorArr) {
+void GetInputs(vector<int>& vectorArr) {
     int inputVal;
     unsigned i;
      for (i = 0; i < VALUE_COUNT; ++i) {
@@ -41,7 +48,14 @@ void getInputs(vector<int>& vectorArr) {
     }
 }
 
+bool CheckVectorSize(const vector<int> vectorArr) {
+    if (vectorArr.size() == VALUE_COUNT) {
+        // cout << "TRUE\n"; // DEBUGGING
+        return true;
+    }
 
+    return false;
+}
 
 void SwapValues(int& userVal1, int& userVal2, int& userVal3, int& userVal4) {
 
