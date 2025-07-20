@@ -6,13 +6,12 @@ using namespace std;
 vector<double> floatList;
 int inputNumCount; // n of elements in vector
 double inputValues; // element values of vector
-double maxValue; // max element value
 int i;
 unsigned j;
 
 void getNumCount();
 void populateList(int nElements);
-int getMax(vector<double> list);
+double getMax(vector<double>& list);
 void normalize(vector<double> list, double max);
 
 int main() {
@@ -39,8 +38,8 @@ void populateList(int nElements) {
     }
 }
 
-int getMax(vector<double> list) {
-    maxValue = list[0];
+double getMax(const vector<double>& list) {
+    double maxValue = list[0];
 
     for (j = 0; j < list.size(); ++j) {
         if (list.at(j) > maxValue) {
