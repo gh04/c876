@@ -48,7 +48,7 @@ void GetInputs(vector<int>& vectorArr) {
     }
 }
 
-bool CheckVectorSize(const vector<int> vectorArr) {
+bool CheckVectorSize(const vector<int>& vectorArr) {
     if (vectorArr.size() == VALUE_COUNT) {
         // cout << "TRUE\n"; // DEBUGGING
         return true;
