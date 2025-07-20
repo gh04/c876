@@ -20,7 +20,7 @@ using namespace std;
     8 3 4 2
 */
 int const VALUE_COUNT = 4;
-bool CheckVectorSize(const vector<int> vectorArr);
+bool CheckVectorSize(const vector<int>& vectorArr);
 void GetInputs(vector<int>& inputValues);
 void SwapValues(int& userVal1, int& userVal2, int& userVal3, int& userVal4);
 
