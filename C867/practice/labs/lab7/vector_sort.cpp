@@ -56,7 +56,9 @@ void PopulateVector(vector<int>& myVec, int size) {
         myVec.push_back(inputVal);
    }
 }
-
+/*
+    Insertion Sort
+*/
 void SortVector(vector<int>& myVec) {
     unsigned i;
     for (i = 1; i < myVec.size(); ++i) {
