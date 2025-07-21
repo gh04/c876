@@ -52,7 +52,7 @@ void PopulateVector(vector<int>& myVec, int size) {
     unsigned i;
     int inputVal;
     for(i = 0; i < size; ++i) {
-        cin >> inputVal;
+        std::cin >> inputVal;
         myVec.push_back(inputVal);
    }
 }
@@ -65,15 +65,15 @@ void SortVector(vector<int>& myVec) {
         while (j >= 0 && myVec.at(j) < key) {
             myVec.at(j + 1) = myVec.at(j);
             j = j - 1;
-            myVec.at(j + 1) = key;
         }
+        myVec.at(j + 1) = key;
     }
 }
 
 void PrintSortedList(const vector<int>& myVec) {
     unsigned i;
     for (i = 0; i < myVec.size(); ++i) {
-        cout << myVec.at(i) << ",";
+        std::cout << myVec.at(i) << ",";
     }
-    cout << endl;
+    std::cout << std::endl;
 }
