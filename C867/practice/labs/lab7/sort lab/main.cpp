@@ -10,7 +10,7 @@ void PrintResult(int nTimes);
 
 
 int main() {
-    srand(2); // Setting the seed requirement that is provided. Replace with srand(time(nullptr)) for better randomization
+    srand(time(nullptr)); // Seeding rand
     PrintResult(GetInput());
 
     return 0;
