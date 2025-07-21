@@ -20,15 +20,23 @@ Fibonacci(7) is 13
 Note: Use a for loop and DO NOT use recursion.
 */
 int Fibonacci(int n) {
-//    int fibN;
-//    int j;
+    int first = 0;
+    int second = 1;
+    int next;
+
     if (n < 0) {
         return -1;
     } else if (n < 2) {
         return n;
     }
 
-    return Fibonacci(n - 1) + Fibonacci(n - 2);
+    for (int i = 0; i < n; ++i) {
+        next = first + second;
+        first = second;
+        second = next;
+    }
+
+    return first;
     
 
 }
