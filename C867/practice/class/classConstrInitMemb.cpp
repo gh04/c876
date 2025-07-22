@@ -18,10 +18,7 @@ Member::Member() : shortName("Unavailable"), age(-1), group('-') {
 Member::Member(string newShortName, int newAge, char newGroup) : shortName(newShortName), age(newAge), group(newGroup) {
 }
 
-Member::Member(string newShortName, int newAge, char newGroup)  {
-    this->shortName = newShortName;
-    this->age = newAge;
-    this->group = newGroup;
+Member::Member(string newShortName, int newAge, char newGroup) : shortName(newShortName), age(newAge), group(newGroup) {
 }
 
 void Member::Print() const {
