@@ -26,7 +26,7 @@ void Artist::PrintInfo() const {
     } else if (birthYear > -1 && deathYear < 0) {
         cout << "(" << birthYear << " to present)";
     } else {
-        cout << "(Unkown)";
+        cout << "(unknown)";
     }
     cout << endl;
 }

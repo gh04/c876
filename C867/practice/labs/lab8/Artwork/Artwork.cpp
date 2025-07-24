@@ -1,9 +1,9 @@
 #include "Artwork.h"
 #include <iostream>
 
-Artwork::Artwork() : title("unkown"), yearCreated(-1) {}
+Artwork::Artwork() : title("unknown"), yearCreated(-1) {}
 
-Artwork::Artwork(string title, int yearCreated, Artist Artist) {
+Artwork::Artwork(string title, int yearCreated, Artist artist) {
     this->title = title;
     this->yearCreated = yearCreated;
     this->artist = artist;
@@ -15,5 +15,5 @@ int Artwork::GetYearCreated() const { return yearCreated; }
 
 void Artwork::PrintInfo() const {
     artist.PrintInfo();
-    cout << "Title: " << title << ", " << yearCreated;
+    cout << "Title: " << title << ", " << yearCreated << endl;
 }
