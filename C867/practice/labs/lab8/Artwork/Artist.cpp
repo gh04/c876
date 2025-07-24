@@ -20,6 +20,7 @@ int Artist::GetBirthYear() const { return birthYear; }
 int Artist::GetDeathYear() const { return deathYear; }
 
 void Artist::PrintInfo() const {
+    cout << "Artist: " << artistName << " ";
     if (birthYear > -1 && deathYear > -1) {
         cout << "(" << birthYear << " to " << deathYear << ")";
     } else if (birthYear > -1 && deathYear < 0) {
