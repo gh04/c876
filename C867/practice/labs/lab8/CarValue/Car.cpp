@@ -35,8 +35,8 @@ void Car::CalcCurrentValue(int currentYear) {
 void Car::PrintInfo() const {
     cout << fixed << setprecision(0)
          << "Car's information:\n"
-         << "\tModel year: " << GetModelYear()
-         << "\n\tPurchase price: $" << GetPurchasePrice()
-         << "\n\tCurrent value: $" << currentValue << endl;
+         << "  Model year: " << GetModelYear()
+         << "\n  Purchase price: $" << GetPurchasePrice()
+         << "\n  Current value: $" << currentValue << endl;
 
 }
