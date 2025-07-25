@@ -17,11 +17,12 @@ class FoodItem {
         double GetCalories(double numServings) const;
         
         // Other
+        void PrintInfo();
     private:
         string name;
         double fat;
         double carbs;
-        double protien;
+        double protein;
 };
 
 #endif
